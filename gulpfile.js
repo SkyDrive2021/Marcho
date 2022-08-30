@@ -33,11 +33,11 @@ function browsersync() {
 }
 
 
-
 function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
     'node_modules/slick-carousel/slick/slick.js',
+    'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
     'app/js/main.js'
   ])
     .pipe(concat('main.min.js'))
@@ -67,7 +67,7 @@ function build() {
     'app/**/*.html',
     'app/css/style.min.css',
     'app/js/main.min.js',
-  ],{base: 'app'})
+  ], { base: 'app' })
     .pipe(dest('dist'))
 }
 

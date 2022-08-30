@@ -165,7 +165,7 @@
   background-image: url('../images/decor/categories-bg.svg');
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: center ;
+  background-position: center;
 
 }
 
@@ -288,6 +288,58 @@
     color: $title;
     @extend %roboto-400;
     transition: all .3s;
+  }
+}
+
+.video-fashion {
+  background-color: $bg;
+  background-image: url('../images/decor/fashion-bg.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 125px 0;
+
+  &__inner {
+    display: flex;
+  }
+
+  &-popup {
+    margin-right: 60px;
+    background-image: url('../images/video-fashion.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 480px;
+    max-width: 535px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__content {
+    max-width: 570px;
+  }
+
+
+
+  &__subtitle {
+    padding-top: 75px;
+    font-style: 22px;
+    @extend %quicksand-500;
+    color: $accent;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+
+  &__title,
+  &__text {
+    text-align: left;
+  }
+
+
+  &__link {
+    @extend %btn;
+    
   }
 }
 
