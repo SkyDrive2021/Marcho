@@ -70,8 +70,130 @@
   }
 }
 
+.footer {
+  background-color: $bg;
+}
 
+.footer-top {
+  padding: 70px 0 40px;
+  border-bottom: 1px solid #ececec;
+  display: flex;
 
+  &__contact {
+    width: 250px;
+    margin-right: 50px;
+  }
+
+  &__nav {
+    width: 170px;
+    margin-right: 30px;
+  }
+
+  &__item-form {
+    max-width: 470px
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 33px;
+  }
+
+  &__adress,
+  &__email,
+  &__phone {
+    display: block;
+    margin-bottom: 10px;
+
+  }
+
+  &__social-list {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  &__social-item+.footer-top__social-item {
+    padding-left: 18px;
+  }
+
+  &__social-link {
+    transition: all .3s;
+
+    path {
+      fill: $default;
+    }
+
+    &:hover {
+      path {
+        fill: $accent;
+      }
+    }
+  }
+
+  &__title {
+    color: $title;
+    @extend %roboto-500;
+    margin-bottom: 40px;
+    font-size: 22px;
+    line-height: 1;
+  }
+
+  &__link {
+    display: block;
+    margin-bottom: 12px;
+
+  }
+
+  &__text {
+    margin-bottom: 25px;
+  }
+
+  &__form-input {
+    background-color: #fff;
+    max-width: 320px;
+    width: 100%;
+    border: none;
+    padding: 12px 10px 12px 15px;
+    box-shadow: 0px 7px 20px 0px rgba(192, 192, 192, 0.3);
+
+    &::placeholder {
+      color: $default;
+      font-size: 16px;
+    }
+  }
+
+  &__form-btn {
+    @extend %btn;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+.footer-bottom {
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+
+  &__accept-img {
+    display: inline;
+    padding-left: 25px;
+    vertical-align: middle;
+  }
+}
+
+.top {
+  &__container {
+    max-width: 1700px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    padding: 120px 0 130px;
+    text-align: center;
+  }
+}
 
 .top-slider {
   background-image: url('../images/decor/top-slider-bg.png');
@@ -101,7 +223,6 @@
     color: $title;
     @extend %roboto-700;
     margin-bottom: 35px;
-
   }
 
   &__text {
@@ -112,7 +233,6 @@
   &__link {
     @extend %btn;
     padding: 15px 35px;
-
   }
 
   .slick-dots {
@@ -166,7 +286,6 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-
 }
 
 .info {
@@ -188,7 +307,6 @@
     left: -45px;
     width: 120px;
     height: 121px;
-
   }
 
   &::after {
@@ -197,7 +315,6 @@
     right: -23px;
     width: 65px;
     height: 52px;
-
   }
 
   &__item {
@@ -205,7 +322,6 @@
     padding: 60px 30px;
     width: 370px;
     box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
-
   }
 
   &__item-title {
@@ -320,8 +436,6 @@
     max-width: 570px;
   }
 
-
-
   &__subtitle {
     padding-top: 75px;
     font-style: 22px;
@@ -339,7 +453,6 @@
 
   &__link {
     @extend %btn;
-
   }
 }
 
@@ -399,7 +512,6 @@
     width: 1px;
     background-color: #ececec;
     top: 10px;
-
   }
 
   &__link--line::before {
@@ -424,13 +536,11 @@
 
   &__images {
     object-fit: cover;
-
   }
 
   &:hover {
     .product-item__link-box {
       transform: translateY(0);
-
     }
   }
 
@@ -501,7 +611,6 @@
     display: flex;
     justify-content: space-between;
     margin-top: 55px;
-
   }
 
   &__clock-item {
@@ -531,7 +640,6 @@
     border: 1px solid $accent;
     padding: 14px 27px;
     margin-top: 55px;
-
   }
 }
 
@@ -543,7 +651,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
   }
 }
 
@@ -567,7 +674,6 @@
       height: 53px;
       background-image: url('../images/decor/blog-decor.svg');
       z-index: -1;
-
     }
   }
 
@@ -621,7 +727,6 @@
       height: 20px;
       left: 0;
       top: 4px;
-
     }
   }
 
@@ -653,145 +758,84 @@
     position: absolute;
     top: 8px;
     right: -14px;
-
-
   }
 
 }
 
+.modal {
+  padding-top: 100px;
+  max-width: 570px;
+  margin: 0 auto 115px;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.footer {
-  background-color: $bg;
-}
-
-.footer-top {
-  padding: 70px 0 40px;
-  border-bottom: 1px solid #ececec;
-  display: flex;
-
-  &__contact {
-    width: 250px;
-    margin-right: 50px;
-  }
-
-  &__nav {
-    width: 170px;
-    margin-right: 30px;
-  }
-
-  &__item-form {
-    max-width: 470px
-  }
-
-  &__logo {
-    display: block;
-    margin-bottom: 33px;
-  }
-
-  &__adress,
-  &__email,
-  &__phone {
-    display: block;
-    margin-bottom: 10px;
-
-  }
-
-  &__social-list {
-    display: flex;
-    align-items: center;
-    margin-top: 30px;
-  }
-
-  &__social-item+.footer-top__social-item {
-    padding-left: 18px;
-  }
-
-  &__social-link {
-    transition: all .3s;
-
-    path {
-      fill: $default;
-    }
-
-    &:hover {
-      path {
-        fill: $accent;
-      }
-    }
-  }
-
-  &__title {
-    color: $title;
-    @extend %roboto-500;
+  &__links {
+    text-align: center;
     margin-bottom: 40px;
-    font-size: 22px;
-    line-height: 1;
   }
 
   &__link {
+    color: #909090;
+    font-size: 22px;
+    @extend %roboto-400;
+    text-transform: uppercase;
+    margin: 0 30px;
+  }
+
+  &__link--active {
+    color: $accent;
+  }
+
+  &__label {
     display: block;
-    margin-bottom: 12px;
-
+    margin-bottom: 30px;
   }
 
-  &__text {
-    margin-bottom: 25px;
-  }
-
-  &__form-input {
-    background-color: #fff;
-    max-width: 320px;
+  &__input {
+    display: block;
     width: 100%;
     border: none;
-    padding: 12px 10px 12px 15px;
-    box-shadow: 0px 7px 20px 0px rgba(192, 192, 192, 0.3);
-
-    &::placeholder {
-      color: $default;
-      font-size: 16px;
-    }
+    background-color: $bg;
+    margin-top: 4px;
+    height: 60px;
+    padding: 0 15px;
   }
-
-  &__form-btn {
-    @extend %btn;
-    border: none;
-    cursor: pointer;
-  }
+&__btn{
+  display: block;
+  background-color: $title;
+  text-transform: uppercase;
+  color: #fff;
+  @extend %roboto-400;
+  padding: 13px 0;
+  bottom: none;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+}
+&__error{
+  display: block;
+  margin-top: 12px;
+  color: $accent;
+}
 }
 
-.footer-bottom {
-  height: 75px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 12px;
 
-  &__accept-img {
-    display: inline;
-    padding-left: 25px;
-    vertical-align: middle;
-  }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
