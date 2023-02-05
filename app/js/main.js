@@ -1,5 +1,13 @@
 $(function () {
 
+  $('.product-tabs__top-item').on('click', function (e) {
+    e.preventDefault();
+    $('.product-tabs__top-item').removeClass('product-tabs__top-item--active');
+    $(this).addClass('product-tabs__top-item--active');
+    $('.product-tabs__content-item').removeClass('product-tabs__content-item--active');
+    $($(this).attr('href')).addClass('product-tabs__content-item--active');
+  });
+
   $('.product-slide__thumb').slick({
     asNavFor: '.product-slide__big',
     focusOnSelect: true,
@@ -31,7 +39,6 @@ $(function () {
 
   $('.select-style, .product-one__item-num').styler();
 
-
   $('.filter-price__input').ionRangeSlider({
     type: "double",
     prefix: "$",
@@ -42,7 +49,6 @@ $(function () {
     onChange: function (data) {
       $('.filter-price__from').text(data.from);
       $('.filter-price__to').text(data.to);
-
     }
   });
 
@@ -55,13 +61,20 @@ $(function () {
   });
 
   $(".star").rateYo({
-
     starWidth: "17px",
     normalFill: "#ccccce",
     ratedFill: "#ffc35b",
     readOnly: true
   });
 
+  $(".comments-form__star").rateYo({
+    starWidth: "20px",
+    normalFill: "#ccccce",
+    ratedFill: "#ffc35b",
+    onInit: function (rating, rateYoInstance) {
+      console.log("RateYo initialized! with " + rating);
+    }
+  });
 
   function getTimeRemaining(endtime) {
     const total = Date.parse(endtime) - Date.parse(new Date());
@@ -88,7 +101,6 @@ $(function () {
 
     function updateClock() {
       const t = getTimeRemaining(endtime);
-
       daysSpan.innerHTML = t.days;
       hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
       minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
