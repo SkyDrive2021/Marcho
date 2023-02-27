@@ -1,0 +1,173 @@
+@media(max-width:1230px) {
+
+  .person,
+  .latest-post {
+    display: none;
+  }
+
+  .blog-page {
+
+    .filter-category,
+    .filter-popular {
+      display: none;
+    }
+
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__content {
+      width: 100%;
+      margin-right: 0;
+    }
+
+    &__aside {
+      width: 100%;
+      order: -1;
+    }
+
+    &__img {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+
+  .filter-search {
+    &__input {
+      width: 100%;
+    }
+  }
+}
+
+@media(max-width: 1200px) {
+  .top__container {
+    padding: 50px 0;
+  }
+}
+
+@media(max-width: 620px) {
+  .blog-page {
+    padding: 50px 0;
+
+    &__item-box {
+      padding: 20px;
+    }
+
+    &__img {
+      height: 260px;
+
+    }
+  }
+}
+
+
+
+
+@media(max-width: 620px) {
+  .blog-one {
+    &__text {
+      padding: 10px 20px;
+    }
+
+    &__info {
+      display: block;
+    }
+
+    &__info-item {
+      margin-bottom: 10px;
+    }
+
+    .comments-form {
+      padding-bottom: 0;
+    }
+
+    &__box {
+      flex-wrap: wrap;
+      padding-right: 10px;
+    }
+  }
+
+  .comments-form {
+    &__box-input {
+      display: block;
+      margin-bottom: 0;
+    }
+
+    &__text-input {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+  }
+}
+
+
+@media(max-width: 450px) {
+  .blog-one {
+    &__box {
+      display: block;
+      margin: 5px;
+    }
+
+    &__author {
+      margin-bottom: 0;
+      flex-wrap: wrap;
+    }
+
+    &__author-img {
+      height: 100px;
+      width: 100px;
+      margin-bottom: 10px;
+    }
+
+    &__author-text {
+      margin: 0px;
+    }
+
+    &__author-name {
+      margin-bottom: 5px;
+    }
+
+    &__text {
+      blockquote {
+        padding: 10px;
+      }
+    }
+  }
+
+  .comments {
+    &__img {
+      min-width: 50px;
+      height: 50px;
+      margin-right: 15px;
+    }
+  }
+}
+
+
+
+@media(max-width: 375px) {
+  .blog-page {
+    &__item-box {
+      padding: 10px 5px;
+    }
+
+    &__img {
+      height: 170px;
+    }
+
+    &__slider {
+      .slick-next {
+        right: 10px;
+      }
+
+      .slick-prev {
+        left: 10px;
+      }
+    }
+  }
+
+  .filter__item {
+    padding: 25px 15px;
+  }
+}
