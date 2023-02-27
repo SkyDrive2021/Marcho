@@ -1,0 +1,87 @@
+@media(max-width:1230px) {
+
+  .person,
+  .latest-post {
+    display: none;
+  }
+
+  .blog-page {
+
+    .filter-category,
+    .filter-popular {
+      display: none;
+    }
+
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__content {
+      width: 100%;
+      margin-right: 0;
+    }
+
+    &__aside {
+      width: 100%;
+      order: -1;
+    }
+
+    &__img {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+
+  .filter-search {
+    &__input {
+      width: 100%;
+    }
+  }
+}
+
+@media(max-width: 1200px) {
+  .top__container {
+    padding: 50px 0;
+  }
+}
+
+@media(max-width: 620px) {
+  .blog-page {
+    padding: 50px 0;
+
+    &__item-box {
+      padding: 20px;
+    }
+
+    &__img {
+      height: 260px;
+      
+    }
+  }
+}
+
+@media(max-width: 375px) {
+  .blog-page {
+    &__item-box {
+      padding: 10px 5px;
+    }
+
+    &__img {
+      height: 170px;
+    }
+
+    &__slider {
+      .slick-next {
+        right: 10px;
+      }
+
+      .slick-prev {
+        left: 10px;
+      }
+    }
+  }
+
+  .filter__item {
+    padding: 25px 15px;
+  }
+}
