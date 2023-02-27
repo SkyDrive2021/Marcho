@@ -9,7 +9,7 @@
     display: flex;
   }
 
-  &-popup {
+  &__popup {
     margin-right: 60px;
     background-image: url('../images/video-fashion.png');
     background-repeat: no-repeat;
@@ -41,8 +41,46 @@
     text-align: left;
   }
 
-
   &__link {
     @extend %btn;
+  }
+}
+
+@media(max-width: 1050px) {
+  .video-fashion {
+    padding: 50px 0;
+
+    &__content,
+    &__title,
+    &__text {
+      text-align: center;
+    }
+
+    &__inner {
+      display: block;
+    }
+
+    &__popup {
+      min-width: 100%;
+    }
+
+    &__content {
+      min-width: 100%;
+    }
+  }
+}
+
+@media(max-width: 620px) {
+  .video-fashion {
+    padding: 60px 0;
+
+    &__popup {
+      height: 270px;
+    }
+
+    &__subtitle {
+      padding-top: 40px;
+      font-size: 18px;
+    }
   }
 }
