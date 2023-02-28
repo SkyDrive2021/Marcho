@@ -37,6 +37,30 @@
       width: 100%;
     }
   }
+
+  .shop {
+    &__inner {
+      display: block;
+    }
+
+    &__filters {
+      width: 100%;
+      margin-right: 0;
+      display: none;
+    }
+  }
+
+  .shop-content {
+    &__inner {
+      display: grid;
+      grid-gap: 30px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__nogrid {
+      display: flex;
+    }
+  }
 }
 
 @media(max-width: 1200px) {
@@ -45,7 +69,66 @@
   }
 }
 
+@media(max-width: 1100px) {
+  .contact {
+    &__inner {
+      display: block;
+    }
+
+    &__info {
+      margin-right: 0;
+      min-width: 100%;
+      margin-bottom: 30px;
+    }
+
+    &__form {
+      box-shadow: none;
+      padding: 0;
+    }
+
+    &__form-box {
+      display: block;
+
+      input {
+        width: 100%;
+      }
+    }
+  }
+
+  .product-item {
+    &__price {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+
+@media(max-width: 860px) {
+  .shop-content {
+    &__inner {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media(max-width: 700px) {
+  .shop-content {
+    &__filter-buttons {
+      display: none;
+    }
+
+    &__filter {
+      padding: 20px 25px 20px 0;
+    }
+  }
+}
+
 @media(max-width: 620px) {
+  .shop {
+    padding: 50px 0;
+  }
+
   .blog-page {
     padding: 50px 0;
 
@@ -58,12 +141,7 @@
 
     }
   }
-}
 
-
-
-
-@media(max-width: 620px) {
   .blog-one {
     &__text {
       padding: 10px 20px;
@@ -97,7 +175,12 @@
       width: 100%;
       margin-bottom: 30px;
     }
+  }
 
+  .shop-content {
+    &__inner {
+      grid-gap: 0 10px;
+    }
   }
 }
 
@@ -142,6 +225,33 @@
       margin-right: 15px;
     }
   }
+
+  .map {
+    padding: 50px 0;
+  }
+
+  #map {
+    height: 250px;
+  }
+
+  .contact {
+    &__info-title {
+      font-size: 28px;
+      line-height: 34px;
+    }
+  }
+
+  .pagination {
+    &__arrows {
+      display: none;
+    }
+  }
+
+  .shop-content {
+    &__inner {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
 }
 
 
@@ -169,5 +279,22 @@
 
   .filter__item {
     padding: 25px 15px;
+  }
+
+  .contact {
+    &__info-item {
+      padding-left: 55px;
+
+      &::before {
+        top: 1px;
+        width: 50px;
+        height: 50px;
+      }
+
+      &::after {
+        top: 16px;
+        left: 18px;
+      }
+    }
   }
 }
