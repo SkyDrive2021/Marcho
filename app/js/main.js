@@ -4,6 +4,10 @@ $(function () {
     $('.menu__list').toggleClass('menu__list--active');
   });
 
+  $('.shop__filter-btn').on('click', function () {
+    $('.shop__filters').slideToggle();
+  });
+
 
   $('.blog-page__slider').slick({
     prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="4.969" height="9.97" viewBox="0 0 4.969 9.97"><path id="angle_left" class="cls-1" d="M973.64,3459.16a0.745,0.745,0,0,1,.178-0.49l3.741-4.28a0.548,0.548,0,0,1,.863,0,0.762,0.762,0,0,1,0,.98l-3.311,3.79,3.31,3.79a0.776,0.776,0,0,1,0,.99,0.56,0.56,0,0,1-.862,0l-3.741-4.28a0.772,0.772,0,0,1-.178-0.5h0Zm0,0" transform="translate(-973.625 -3454.19)" /></svg ></button>',
@@ -33,6 +37,14 @@ $(function () {
     draggable: false,
     arrows: false,
     fade: true,
+    responsive: [
+      {
+       breakpoint: 1051,
+       settings:{
+         draggable:true,
+       } 
+      },
+    ]
   });
 
   $('.shop-content__filter-btn').on('click', function () {
