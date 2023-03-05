@@ -40,26 +40,39 @@
 
   .shop {
     &__inner {
-      display: block;
+      order: 1;
     }
 
     &__filters {
+      margin-top: 115px;
       width: 100%;
       margin-right: 0;
-      display: none;
+      transform: translateX(-200%);
+      position: absolute;
+      width: 80%;
+      transition: all 0.3s;
+      z-index: 12;
+      background-color: #fff;
+    }
+
+    &__filters--active {
+      transform: translateX(0%);
+      transition: all 0.3s;
     }
 
     &__filter-btn {
-      display: block;
-      border: none;
+      padding: 12px 26px;
       background-color: $accent;
-      padding: 0;
-      width: 60px;
-      height: 60px;
-      position: fixed;
-      right: 0;
-      z-index: 5;
-      bottom: 50px;
+      text-transform: uppercase;
+      color: #fff;
+      box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
+      border: none;
+      z-index: 20;
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-left: 15px;
     }
   }
 
@@ -72,6 +85,13 @@
 
     &__nogrid {
       display: flex;
+    }
+
+    &__filter {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background-color: #fff;
     }
   }
 
@@ -245,9 +265,13 @@
     &__inner {
       grid-gap: 0 10px;
     }
-  }
-}
 
+    &__filter-show {
+      display: none;
+    }
+  }
+
+}
 
 @media(max-width: 500px) {
   .product-tabs {
@@ -385,6 +409,7 @@
 
   .related {
     padding: 0 0 50px;
+
     &__items {
 
       grid-gap: 15px;
@@ -455,6 +480,17 @@
 
     &__content-text {
       margin: 0;
+    }
+  }
+
+  .shop__filter-btn {
+    margin-bottom: 20px;
+  }
+
+  .shop-content {
+
+    &__filter {
+      display: block;
     }
   }
 }

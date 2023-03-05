@@ -218,6 +218,15 @@
     }
   }
 
+  &--smallsale {
+    .product-item__img-box::before {
+      top: 10px;
+      left: 10px;
+      padding: 5px 5px;
+      font-size: 10px;
+    }
+  }
+
   .star {
     margin: 0 auto;
   }
