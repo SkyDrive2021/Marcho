@@ -16,7 +16,8 @@
     width: 370px;
     margin-right: 30px;
   }
-  &__filter-btn{
+
+  &__filter-btn {
     display: none;
   }
 }
@@ -341,6 +342,19 @@
   border: none;
   background-image: url('../images/icons/angle-down.svg');
 }
+
+.jq-selectbox__dropdown {
+  background-color: #fff;
+  ul{
+    padding: 0;
+  }
+
+  li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+}
+
 
 .product-page {
   padding: 120px 0 0;
@@ -1278,14 +1292,16 @@
     margin-bottom: 30px;
   }
 
-  &__form-box{
+  &__form-box {
     display: flex;
     justify-content: space-between;
-    input{
+
+    input {
       width: 330px;
     }
   }
-  &__form-btn{
+
+  &__form-btn {
     @extend %btn;
     border: none;
   }
